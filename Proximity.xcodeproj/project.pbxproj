@@ -10,6 +10,7 @@
 		9A8254C01F3E1CA700A7D6EA /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8254BE1F3E1CA700A7D6EA /* ColorViewController.swift */; };
 		9A8254C11F3E1CA700A7D6EA /* ColorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A8254BF1F3E1CA700A7D6EA /* ColorViewController.xib */; };
 		9A8254C51F3E1F8800A7D6EA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A8254C41F3E1F8800A7D6EA /* LaunchScreen.xib */; };
+		9A8254C81F3E26DE00A7D6EA /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8254C71F3E26DE00A7D6EA /* CoreBluetooth.framework */; };
 		9ABFFED81F3E0F7100BD6C9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFFED71F3E0F7100BD6C9A /* AppDelegate.swift */; };
 		9ABFFEDF1F3E0F7100BD6C9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ABFFEDE1F3E0F7100BD6C9A /* Assets.xcassets */; };
 		9ABFFEED1F3E0F7100BD6C9A /* ProximityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFFEEC1F3E0F7100BD6C9A /* ProximityTests.swift */; };
@@ -37,6 +38,7 @@
 		9A8254BE1F3E1CA700A7D6EA /* ColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
 		9A8254BF1F3E1CA700A7D6EA /* ColorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorViewController.xib; sourceTree = "<group>"; };
 		9A8254C41F3E1F8800A7D6EA /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		9A8254C71F3E26DE00A7D6EA /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		9ABFFED41F3E0F7100BD6C9A /* Proximity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Proximity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ABFFED71F3E0F7100BD6C9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ABFFEDE1F3E0F7100BD6C9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A8254C81F3E26DE00A7D6EA /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A8254C61F3E26DE00A7D6EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A8254C71F3E26DE00A7D6EA /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9ABFFECB1F3E0F7100BD6C9A = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +92,7 @@
 				9ABFFEEB1F3E0F7100BD6C9A /* ProximityTests */,
 				9ABFFEF61F3E0F7100BD6C9A /* ProximityUITests */,
 				9ABFFED51F3E0F7100BD6C9A /* Products */,
+				9A8254C61F3E26DE00A7D6EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

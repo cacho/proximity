@@ -5,12 +5,13 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12121"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ColorViewController" customModule="Proximity" customModuleProvider="target">
             <connections>
+                <outlet property="signalLabel" destination="Y5B-UW-lLH" id="5Jh-uC-pAa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,7 +22,25 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfD-pV-MOX">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5B-UW-lLH">
+                            <rect key="frame" x="8" y="638" width="359" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="C3g-uK-ZhT"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                            <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <size key="shadowOffset" width="1" height="1"/>
+                        </label>
+                    </subviews>
                     <color key="backgroundColor" red="1" green="0.90505350476384161" blue="0.87293421209790301" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Y5B-UW-lLH" secondAttribute="bottom" constant="8" id="MNI-Wh-NX6"/>
+                        <constraint firstItem="Y5B-UW-lLH" firstAttribute="leading" secondItem="tfD-pV-MOX" secondAttribute="leading" constant="8" id="YXo-eL-Zhh"/>
+                        <constraint firstAttribute="trailing" secondItem="Y5B-UW-lLH" secondAttribute="trailing" constant="8" id="esi-c0-oqq"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -32,6 +51,7 @@
                 <constraint firstItem="tfD-pV-MOX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fEa-A7-b4v"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="-238.5" y="54.5"/>
         </view>
     </objects>
 </document>

@@ -7,42 +7,58 @@
 //
 
 import UIKit
+import CoreBluetooth
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CBCentralManagerDelegate, CBPeripheralManagerDelegate {
 
     var window: UIWindow?
+    var central: CBCentralManager?
+    var peripheral: CBPeripheralManager?
+    var controller: ColorViewController?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        self.controller = ColorViewController(nibName: "ColorViewController", bundle: nil)
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = ColorViewController(nibName: "ColorViewController", bundle: nil)
+        self.window?.rootViewController = self.controller
         self.window?.makeKeyAndVisible()
+        self.central = CBCentralManager(delegate: self, queue: nil)
+        self.peripheral = CBPeripheralManager(delegate: self, queue: nil)
         return true
     }
 
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+    /**
+    Central manager protocol
+    */
+
+    func centralManagerDidUpdateState(_ central: CBCentralManager) {
+        if central.state == CBManagerState.poweredOn {
+            central.scanForPeripherals(withServices: [CBUUID.init(string: "180D")], options: [CBCentralManagerScanOptionAllowDuplicatesKey : true])
+        }
     }
 
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+
+    func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
+        self.controller?.updateSignal(strenght: RSSI.intValue)
     }
 
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-    }
 
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
+    /**
+    Peripheral manager protocol
+    */
 
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
+        if peripheral.state == CBManagerState.poweredOn {
+            let serviceUUID = CBUUID.init(string: "180D")
+            let pipeUUID = CBUUID.init(string: "281D")
+            let characteristic = CBMutableCharacteristic(type: pipeUUID, properties: CBCharacteristicProperties.notify, value: nil, permissions: CBAttributePermissions.init(rawValue: 0))
+            let service = CBMutableService(type: serviceUUID, primary: true)
+            service.characteristics = [characteristic]
+            peripheral.add(service)
+            peripheral.startAdvertising([CBAdvertisementDataServiceUUIDsKey : [serviceUUID]])
+        }
     }
-
 
 }
 
