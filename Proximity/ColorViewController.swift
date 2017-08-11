@@ -14,7 +14,7 @@ class ColorViewController: UIViewController {
     
     @IBOutlet weak var colorView: UIView!
     @IBOutlet weak var signalLabel: UILabel!
-    var timer: Timer?
+    var offTimer: Timer?
 
     override var prefersStatusBarHidden: Bool {
         return true
@@ -38,12 +38,19 @@ class ColorViewController: UIViewController {
         } else if red < 0.0 {
             red = 0.0
         }
-        self.colorView.backgroundColor = UIColor(red: CGFloat(red), green: 0.0, blue: 0.0, alpha: 1.0)
-        self.timer?.invalidate()
-        self.timer = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false) { (timer) in
-            print("off!")
-            self.colorView.backgroundColor = UIColor.black
+
+        UIView.animate(withDuration: 1.2, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.0, options: UIViewAnimationOptions.beginFromCurrentState, animations: {
+            self.colorView.backgroundColor = UIColor(red: CGFloat(red), green: 0.0, blue: 0.0, alpha: 1.0)
+        }) { (completed) in
+        }
+
+        self.offTimer?.invalidate()
+        self.offTimer = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false) { (timer) in
             self.signalLabel.text = "---"
+            UIView.animate(withDuration: 2.5, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.0, options: UIViewAnimationOptions.beginFromCurrentState, animations: {
+                self.colorView.backgroundColor = UIColor.black
+            }) { (completed) in
+            }
         }
     }
 
