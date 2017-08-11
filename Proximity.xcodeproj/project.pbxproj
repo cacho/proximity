@@ -8,10 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9ABFFED81F3E0F7100BD6C9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFFED71F3E0F7100BD6C9A /* AppDelegate.swift */; };
-		9ABFFEDA1F3E0F7100BD6C9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFFED91F3E0F7100BD6C9A /* ViewController.swift */; };
-		9ABFFEDD1F3E0F7100BD6C9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ABFFEDB1F3E0F7100BD6C9A /* Main.storyboard */; };
 		9ABFFEDF1F3E0F7100BD6C9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ABFFEDE1F3E0F7100BD6C9A /* Assets.xcassets */; };
-		9ABFFEE21F3E0F7100BD6C9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ABFFEE01F3E0F7100BD6C9A /* LaunchScreen.storyboard */; };
 		9ABFFEED1F3E0F7100BD6C9A /* ProximityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFFEEC1F3E0F7100BD6C9A /* ProximityTests.swift */; };
 		9ABFFEF81F3E0F7100BD6C9A /* ProximityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFFEF71F3E0F7100BD6C9A /* ProximityUITests.swift */; };
 /* End PBXBuildFile section */
@@ -36,10 +33,7 @@
 /* Begin PBXFileReference section */
 		9ABFFED41F3E0F7100BD6C9A /* Proximity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Proximity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ABFFED71F3E0F7100BD6C9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9ABFFED91F3E0F7100BD6C9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9ABFFEDC1F3E0F7100BD6C9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9ABFFEDE1F3E0F7100BD6C9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9ABFFEE11F3E0F7100BD6C9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9ABFFEE31F3E0F7100BD6C9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9ABFFEE81F3E0F7100BD6C9A /* ProximityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProximityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ABFFEEC1F3E0F7100BD6C9A /* ProximityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProximityTests.swift; sourceTree = "<group>"; };
@@ -98,10 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				9ABFFED71F3E0F7100BD6C9A /* AppDelegate.swift */,
-				9ABFFED91F3E0F7100BD6C9A /* ViewController.swift */,
-				9ABFFEDB1F3E0F7100BD6C9A /* Main.storyboard */,
 				9ABFFEDE1F3E0F7100BD6C9A /* Assets.xcassets */,
-				9ABFFEE01F3E0F7100BD6C9A /* LaunchScreen.storyboard */,
 				9ABFFEE31F3E0F7100BD6C9A /* Info.plist */,
 			);
 			path = Proximity;
@@ -193,6 +184,7 @@
 				TargetAttributes = {
 					9ABFFED31F3E0F7100BD6C9A = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 6C6287FESA;
 						ProvisioningStyle = Automatic;
 					};
 					9ABFFEE71F3E0F7100BD6C9A = {
@@ -232,9 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9ABFFEE21F3E0F7100BD6C9A /* LaunchScreen.storyboard in Resources */,
 				9ABFFEDF1F3E0F7100BD6C9A /* Assets.xcassets in Resources */,
-				9ABFFEDD1F3E0F7100BD6C9A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +249,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9ABFFEDA1F3E0F7100BD6C9A /* ViewController.swift in Sources */,
 				9ABFFED81F3E0F7100BD6C9A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,25 +283,6 @@
 			targetProxy = 9ABFFEF41F3E0F7100BD6C9A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		9ABFFEDB1F3E0F7100BD6C9A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9ABFFEDC1F3E0F7100BD6C9A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		9ABFFEE01F3E0F7100BD6C9A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9ABFFEE11F3E0F7100BD6C9A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9ABFFEFA1F3E0F7100BD6C9A /* Debug */ = {
@@ -414,6 +384,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6C6287FESA;
 				INFOPLIST_FILE = Proximity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = computer.hugo.Proximity;
@@ -426,6 +397,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6C6287FESA;
 				INFOPLIST_FILE = Proximity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = computer.hugo.Proximity;
