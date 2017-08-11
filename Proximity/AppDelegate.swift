@@ -40,7 +40,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CBCentralManagerDelegate,
 
 
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        self.controller?.updateSignal(strenght: RSSI.intValue)
+        if RSSI.intValue < 0 {
+            self.controller?.updateSignal(strength: RSSI.intValue)
+        }
     }
 
 
