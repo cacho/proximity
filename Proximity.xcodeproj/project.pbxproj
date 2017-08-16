@@ -18,6 +18,7 @@
 		9AE742EC1F44B70300911D14 /* ParticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE742EA1F44B70300911D14 /* ParticlesViewController.swift */; };
 		9AE742ED1F44B70300911D14 /* ParticlesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AE742EB1F44B70300911D14 /* ParticlesViewController.xib */; };
 		9AE742EF1F44B89000911D14 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE742EE1F44B89000911D14 /* SpriteKit.framework */; };
+		9AE742F21F44BD5200911D14 /* particle1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AE742F11F44BD5200911D14 /* particle1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		9AE742EA1F44B70300911D14 /* ParticlesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticlesViewController.swift; sourceTree = "<group>"; };
 		9AE742EB1F44B70300911D14 /* ParticlesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParticlesViewController.xib; sourceTree = "<group>"; };
 		9AE742EE1F44B89000911D14 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		9AE742F11F44BD5200911D14 /* particle1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = particle1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				9ABFFED61F3E0F7100BD6C9A /* Proximity */,
+				9AE742F01F44BD3700911D14 /* img */,
 				9ABFFEEB1F3E0F7100BD6C9A /* ProximityTests */,
 				9ABFFEF61F3E0F7100BD6C9A /* ProximityUITests */,
 				9ABFFED51F3E0F7100BD6C9A /* Products */,
@@ -145,6 +148,15 @@
 				9ABFFEF91F3E0F7100BD6C9A /* Info.plist */,
 			);
 			path = ProximityUITests;
+			sourceTree = "<group>";
+		};
+		9AE742F01F44BD3700911D14 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				9AE742F11F44BD5200911D14 /* particle1.png */,
+			);
+			name = img;
+			path = Proximity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A8254C11F3E1CA700A7D6EA /* ColorViewController.xib in Resources */,
+				9AE742F21F44BD5200911D14 /* particle1.png in Resources */,
 				9A8254C51F3E1F8800A7D6EA /* LaunchScreen.xib in Resources */,
 				9AE742ED1F44B70300911D14 /* ParticlesViewController.xib in Resources */,
 				9ABFFEDF1F3E0F7100BD6C9A /* Assets.xcassets in Resources */,
