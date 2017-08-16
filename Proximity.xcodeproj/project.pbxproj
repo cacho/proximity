@@ -15,6 +15,9 @@
 		9ABFFEDF1F3E0F7100BD6C9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ABFFEDE1F3E0F7100BD6C9A /* Assets.xcassets */; };
 		9ABFFEED1F3E0F7100BD6C9A /* ProximityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFFEEC1F3E0F7100BD6C9A /* ProximityTests.swift */; };
 		9ABFFEF81F3E0F7100BD6C9A /* ProximityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABFFEF71F3E0F7100BD6C9A /* ProximityUITests.swift */; };
+		9AE742EC1F44B70300911D14 /* ParticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE742EA1F44B70300911D14 /* ParticlesViewController.swift */; };
+		9AE742ED1F44B70300911D14 /* ParticlesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AE742EB1F44B70300911D14 /* ParticlesViewController.xib */; };
+		9AE742EF1F44B89000911D14 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE742EE1F44B89000911D14 /* SpriteKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		9ABFFEF31F3E0F7100BD6C9A /* ProximityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProximityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ABFFEF71F3E0F7100BD6C9A /* ProximityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProximityUITests.swift; sourceTree = "<group>"; };
 		9ABFFEF91F3E0F7100BD6C9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AE742EA1F44B70300911D14 /* ParticlesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticlesViewController.swift; sourceTree = "<group>"; };
+		9AE742EB1F44B70300911D14 /* ParticlesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParticlesViewController.xib; sourceTree = "<group>"; };
+		9AE742EE1F44B89000911D14 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AE742EF1F44B89000911D14 /* SpriteKit.framework in Frameworks */,
 				9A8254C81F3E26DE00A7D6EA /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,6 +87,7 @@
 		9A8254C61F3E26DE00A7D6EA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9AE742EE1F44B89000911D14 /* SpriteKit.framework */,
 				9A8254C71F3E26DE00A7D6EA /* CoreBluetooth.framework */,
 			);
 			name = Frameworks;
@@ -112,6 +120,8 @@
 				9ABFFED71F3E0F7100BD6C9A /* AppDelegate.swift */,
 				9A8254BE1F3E1CA700A7D6EA /* ColorViewController.swift */,
 				9A8254BF1F3E1CA700A7D6EA /* ColorViewController.xib */,
+				9AE742EA1F44B70300911D14 /* ParticlesViewController.swift */,
+				9AE742EB1F44B70300911D14 /* ParticlesViewController.xib */,
 				9ABFFEDE1F3E0F7100BD6C9A /* Assets.xcassets */,
 				9ABFFEE31F3E0F7100BD6C9A /* Info.plist */,
 				9A8254C41F3E1F8800A7D6EA /* LaunchScreen.xib */,
@@ -247,6 +257,7 @@
 			files = (
 				9A8254C11F3E1CA700A7D6EA /* ColorViewController.xib in Resources */,
 				9A8254C51F3E1F8800A7D6EA /* LaunchScreen.xib in Resources */,
+				9AE742ED1F44B70300911D14 /* ParticlesViewController.xib in Resources */,
 				9ABFFEDF1F3E0F7100BD6C9A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AE742EC1F44B70300911D14 /* ParticlesViewController.swift in Sources */,
 				9A8254C01F3E1CA700A7D6EA /* ColorViewController.swift in Sources */,
 				9ABFFED81F3E0F7100BD6C9A /* AppDelegate.swift in Sources */,
 			);

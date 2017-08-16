@@ -15,11 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CBCentralManagerDelegate,
     var window: UIWindow?
     var central: CBCentralManager?
     var peripheral: CBPeripheralManager?
-    var controller: ColorViewController?
+    var controller: ParticlesViewController?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        self.controller = ColorViewController(nibName: "ColorViewController", bundle: nil)
+        self.controller = ParticlesViewController(nibName: "ParticlesViewController", bundle: nil)
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = self.controller
         self.window?.makeKeyAndVisible()
